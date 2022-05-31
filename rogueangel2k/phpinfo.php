@@ -14,21 +14,5 @@
 // *******************************************************
 ?>
 
-<?php /* Header page start */ ?>
-<!DOCTYPE html>
-<head>
-
-</head>
-<html lang="en">
-<body>
-<?php /*  Header body */ ?>
-<a href="index.php"><img src="images/yourlogo.png" title="Your logo title." width="300" height="250" ></a><br /><br />
-<button class="button button1" onclick="location.href='index.php'">Home</button>
-<button class="button button1" onclick="location.href='index.php?blockid=projects'">Projects</button>
-<button class="button button1" onclick="location.href='index.php?blockid=about'">About</button>
-<br />
-<hr>
-<br />
-</body>
-</html>
-<?php /* Header page end */ ?>
+<?php /* Just a simple check for the php version on this server. */ ?>
+<?php phpinfo( ); ?>

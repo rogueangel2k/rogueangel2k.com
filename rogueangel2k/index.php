@@ -1,104 +1,79 @@
-<!-- Requiring config.php -->
+<?php
+// *******************************************************
+// ** Written by Cameron Snyder - 2k@rogueangel2k.com 	**
+// ** Leave this credit block in tact please.		  	**
+// ** Thank you											**
+// **													**
+// ** Inspiration for my projects are due to my 		**
+// ** supportive wife, without whom my dreams would		**
+// ** just be dreams. This project and all others are	**
+// ** dedicated to my wife and son.						**
+// **													**
+// ** I love you both more than words can express.		**
+// **													**
+// *******************************************************
+?>
+
+<?php // <!-- Requiring config.php --> ?>
 <?php require 'config.php'; ?>
-<?php $blockid = ""; ?>
-<!-- Checking for maintenance mode on or off if on display message and stop else continue whole page -->
+<link rel="stylesheet" href="css/style.css">
+<?php // <!-- Checking for maintenance mode on or off if on display message and stop else continue whole page --> ?>
 <?php if ($maintenancemode == "on") : ?>
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html>
+<html lang="en">
 <title><?php echo $sitetitle  ?> | Maintenance Mode On</title>
-<br />
-<center><?php echo $maintenancemessage; ?></center>
+<link rel="stylesheet" href="css/style.css">
+<body>
+<a href="/"><img src="images/yourlogo.png" alt="Your logo title here" width="300" height="250" ></a><br /><br />
+<?php echo $maintenancemessage; ?>
+</body>
+</html>
 <?php endif ?>
 
-<!-- If maintenance mode is off continue main page -->
+<?php // <!-- If maintenance mode is off continue main page --> ?>
 <?php if ($maintenancemode == "off" ) : ?>
-
-<link rel="stylesheet" href="/css/style.css">
 <?php include 'header.php'; ?>
 
-<!-- Block 1 code start -->
+<?php // <!-- Block 1 code start --> ?>
 <?php if ($_GET['blockid'] == "" ) : ?>
-<!-- Main page start -->
+<?php // <!-- Main page start --> ?>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 <title><?php echo $sitetitle  ?> | Home</title>
-</head>
+<link rel="stylesheet" href="css/style.css">
 <body>
-<center>
-<!-- Main page body and blocks of php and everything else -->
-Welcome to your page. This is the main block for the page.
-<br/>
-<!-- End main page body -->
-</center>
+<?php // <!-- Main page body and blocks of php and everything else --> ?>
+Put your main page info here.
+
+This website is fast and efficient. The <a href="https://www.php.net/"><strong>PHP</strong></a> used is light and agile with as few elements as possible to get my point across.<br />
+The <a href="https://www.w3schools.com/css/default.asp"><strong>CSS</strong></a> is short and sweet.
+<?php // <!-- End main page body --> ?>
 </body>
 </html>
-<!-- Main page end -->
+<?php // <!-- Main page end --> ?>
 <?php endif ?>
-<!-- Block 1 code stop -->
+<?php // <!-- Block 1 code stop --> ?>
 
-<!-- Block projects code start -->
-<?php if ($_GET['blockid'] == "projects" ) : ?>
-<!-- Main page start -->
-<!DOCTYPE html>
-<html>
-<head>
-<title><?php echo $sitetitle  ?> | Projects</title>
-</head>
-<body>
-<center>
-<!-- Main page body and blocks of php and everything else -->
-This is listed as a projects page, but check the block id above and title name and you can make it whatever you want.
-<!-- End main page body -->
-</center>
-</body>
-</html>
-<!-- Main page end -->
-<?php endif ?>
-<!-- Block projects code stop -->
-
-<!-- Block about code start -->
+<?php // <!-- Block about code start --> ?>
 <?php if ($_GET['blockid'] == "about" ) : ?>
-<!-- Main page start -->
+<?php // <!-- Main page start --> ?>
 <!DOCTYPE html>
 <html>
-<head>
 <title><?php echo $sitetitle  ?> | About</title>
-</head>
+<link rel="stylesheet" href="css/style.css">
 <body>
-<center>
-<!-- Main page body and blocks of php and everything else -->
-This is listed as an about page, but check the block id above and title name and you can make it whatever you want.
-<!-- End main page body -->
-</center>
+<?php // <!-- Main page body and blocks of php and everything else --> ?>
+Put your About info here.
+
+<?php // <!-- End main page body --> ?>
 </body>
 </html>
-<!-- Main page end -->
+<?php // <!-- About page end --> ?>
 <?php endif ?>
-<!-- Block about code stop -->
+<?php // <!-- Block about code stop --> ?>
 
-<!-- Block resume code start -->
-<?php if ($_GET['blockid'] == "resume" ) : ?>
-<!-- Main page start -->
-<!DOCTYPE html>
-<html>
-<head>
-<title><?php echo $sitetitle  ?> | Résumé</title>
-</head>
-<!-- Main page body and blocks of php and everything else -->
-<body>
-<center>
-This is listed as a resume page, but check the block id above and title name and you can make it whatever you want.
-
-</center>
-</body>
-</html>
-<!-- Main page end -->
-<?php endif ?>
-<!-- Block resume code stop -->
-
-
-<!-- Including footer.php -->
+<?php // <!-- Including footer.php --> ?>
 <?php include 'footer.php'; ?>
 
-<!-- End maintenance mode check on or off -->
+<?php // <!-- End maintenance mode check on or off --> ?>
 <?php endif ?>
