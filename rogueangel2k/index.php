@@ -14,63 +14,56 @@
 // *******************************************************
 ?>
 
-<?php // <!-- Requiring config.php --> ?>
+<?php // <!-- Requiring config.php for all portions of all pages --> ?>
 <?php require 'config.php'; ?>
-<link rel="stylesheet" href="css/style.css">
-<?php // <!-- Checking for maintenance mode on or off if on display message and stop else continue whole page --> ?>
+
+<?php // <!-- Checking for maintenance mode on or off if on display message and stop else continue on to the whole page --> ?>
 <?php if ($maintenancemode == "on") : ?>
-<!DOCTYPE html>
-<html lang="en">
-<title><?php echo $sitetitle  ?> | Maintenance Mode On</title>
-<link rel="stylesheet" href="css/style.css">
-<body>
-<a href="/"><img src="images/yourlogo.png" alt="Your logo title here" width="300" height="250" ></a><br /><br />
+
+<a href="/"><img src="images/jolly_halo.png" alt="Always Fly From the Inside!" width="300" height="250" ></a><br /><br />
 <?php echo $maintenancemessage; ?>
-</body>
-</html>
 <?php endif ?>
+<?php // <!-- End maintenance mode on message --> ?>
 
 <?php // <!-- If maintenance mode is off continue main page --> ?>
 <?php if ($maintenancemode == "off" ) : ?>
+
+<?php // Including header.php ?>
 <?php include 'header.php'; ?>
 
-<?php // <!-- Block 1 code start --> ?>
+<?php // <!-- Block 1 code start - This is the main block which has no block ID set --> ?>
 <?php if ($_GET['blockid'] == "" ) : ?>
 <?php // <!-- Main page start --> ?>
-<!DOCTYPE html>
-<html lang="en">
-<title><?php echo $sitetitle  ?> | Home</title>
-<link rel="stylesheet" href="css/style.css">
-<body>
-<?php // <!-- Main page body and blocks of php and everything else --> ?>
-Put your main page info here.
 
-This website is fast and efficient. The <a href="https://www.php.net/"><strong>PHP</strong></a> used is light and agile with as few elements as possible to get my point across.<br />
-The <a href="https://www.w3schools.com/css/default.asp"><strong>CSS</strong></a> is short and sweet.
+<?php // <!-- Main page body and blocks of php and everything else --> ?>
+Welcome to your page. This is the default paragraph that pulls up when someone simply accesses index.php without any query strings at the end.
 <?php // <!-- End main page body --> ?>
-</body>
-</html>
 <?php // <!-- Main page end --> ?>
 <?php endif ?>
 <?php // <!-- Block 1 code stop --> ?>
 
+<?php // <!-- Block projects code start --> ?>
+<?php if ($_GET['blockid'] == "projects" ) : ?>
+<?php // <!-- Main page start --> ?>
+
+<?php // <!-- Main page body and blocks of php and everything else --> ?>
+Your project info here.
+
+<?php // <!-- End main page body --> ?>
+<?php // <!-- Main page end --> ?>
+<?php endif ?>
+<?php // <!-- Block projects code stop --> ?>
+
 <?php // <!-- Block about code start --> ?>
 <?php if ($_GET['blockid'] == "about" ) : ?>
 <?php // <!-- Main page start --> ?>
-<!DOCTYPE html>
-<html>
-<title><?php echo $sitetitle  ?> | About</title>
-<link rel="stylesheet" href="css/style.css">
-<body>
-<?php // <!-- Main page body and blocks of php and everything else --> ?>
-Put your About info here.
+Your about info here.
 
 <?php // <!-- End main page body --> ?>
-</body>
-</html>
 <?php // <!-- About page end --> ?>
 <?php endif ?>
 <?php // <!-- Block about code stop --> ?>
+
 
 <?php // <!-- Including footer.php --> ?>
 <?php include 'footer.php'; ?>

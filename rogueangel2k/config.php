@@ -18,9 +18,9 @@
 // *******************************************************
 ?>
 <?php
-$maintenancemode = 'off';
-$maintenancemessage = 'This site is currently in maintenance mode. It will be back online again soon. Thank you for your patience.';
-$websiteversion = '1.1.0';
-$sitetitle = 'Place your site title here.';
+$maintenancemode = 'off'; // on or off all lower case
+$maintenancemessage = 'This site is currently in maintenance mode. It will be back online again soon. Thank you for your patience.'; // Make this whatever you please
+$websiteversion = '1.1.2'; // Simple version string
+$sitetitle = 'Place your site title here.'; // Make this the title of your site
 $blockid = ''; // Setting initial blockid as empty
 ?>

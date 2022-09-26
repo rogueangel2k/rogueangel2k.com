@@ -15,20 +15,27 @@
 ?>
 
 <?php /* Header page start */ ?>
-<!DOCTYPE html>
-<head>
 
-</head>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+<title><?php echo $sitetitle  ?></title>
+</head>
+
 <body>
+
 <?php /*  Header body */ ?>
-<a href="index.php"><img src="images/yourlogo.png" title="Your logo title." width="300" height="250" ></a><br /><br />
+<a href="index.php"><img src="images/your_logo.pnb" title="Your title" width="300" height="250" ></a><br /><br />
 <button class="button button1" onclick="location.href='index.php'">Home</button>
 <button class="button button1" onclick="location.href='index.php?blockid=projects'">Projects</button>
+
+<?php /* Use this button later.
+<button class="button button1" onclick="location.href='index.php?blockid=services'">Services</button>
+*/ ?>
 <button class="button button1" onclick="location.href='index.php?blockid=about'">About</button>
 <br />
+
 <hr>
 <br />
-</body>
-</html>
 <?php /* Header page end */ ?>

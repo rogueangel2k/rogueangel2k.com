@@ -14,22 +14,23 @@
 // *******************************************************
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<body>
+
 <br />
 <hr>
 <?php // <!-- Start social icons --> ?>
-<a href="https://www.linkedin.com/"><img class="logo" src="images/linkedin.png" width="35px" height="35px" title="Linkedin"></a>&nbsp;&nbsp;
-<a href="https://www.facebook.com/"><img class="logl" src="images/facebook.png" width="35px" height="35px" title="Facebook"></a>&nbsp;&nbsp;
-<a href="https://twitter.com/"><img src="images/twitter.png" width="35px" height="35px" title="Twitter"></a>&nbsp;&nbsp;
-<a href="https://www.youtube.com/"><img src="images/youtube.png" width="35px" height="35px" title="YouTube"></a>&nbsp;&nbsp;
-<a href="mailto:your.email@here.com"><img src="images/email.png" width="35px" height="35px" title="Email"></a>&nbsp;&nbsp;
+<a href="https://www.linkedin.com/your_url_here"><img class="logo" src="images/linkedin.png" width="35" height="35" title="You on Linkedin"></a>&nbsp;&nbsp;
+<a href="https://www.facebook.com/your_url_here"><img class="logl" src="images/facebook.png" width="35" height="35" title="You on Facebook"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/your_url_here"><img src="images/twitter.png" width="35" height="35" title="You on Twitter"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/user/your_url_here"><img src="images/youtube.png" width="35" height="35" title="You on YouTube"></a>&nbsp;&nbsp;
+<a href="mailto:you@home.com"><img src="images/email.png" width="35" height="35" title="Your Email"></a>&nbsp;&nbsp;
 <br />
+<?php // Simple copyright info ?>
 <p>
-<?php echo "" . date("Y") . "Created by:" ?>&nbsp;<a href="mailto:2k@rogueangel2k.com">Cameron Snyder</a> and <a href="https:////www.rogueangel2k.com">RogueAngel2k.com</a>.
+<?php echo "Copyright &copy; 1998 - " . date("Y") . "" ?>&nbsp;<a href="mailto:2k@rogueangel2k.com">Cameron Snyder</a> and <a href="https://www.rogueangel2k.com">RogueAngel2k.com</a>. All rights reserved.
 </p>
 <br />
-<?php echo $sitetitle  ?> | Version: <?php echo $websiteversion  ?> 
+<?php // Do not edit directly. These are set in config.php  ?>
+<?php echo $sitetitle  ?> | Version: <?php echo $websiteversion  ?> <br /><br />
+
 </body>
 </html>
